@@ -14,7 +14,10 @@
   - morgan
   - nodemon
  
- ### For easier access, I uploaded the nodemodules folder here.
+ ### Install the dependencies using:
+  ```
+npm install
+```
  
  ## Prerequisites
  - NodeJS
