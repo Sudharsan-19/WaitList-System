@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log In</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!--Scripts-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="./css/main.css">
+    <script type="text/javascript">
+		$(document).ready(function(){
+
+			$( "#form" ).submit(function(event) {
+				event.preventDefault();
+
+				$.ajax({
+					type: 'POST',
+					url: '/login',
+					data: $('#form').serialize(),
+					dataType: "json",
+					success: function(response){
+						$('#form')[0].reset();
+						document.getElementById("check").innerHTML=response.Success;
+         				setTimeout(function(){
+							 document.getElementById("check").innerHTML="";
+         					},3000);
+							if (response.Success=="Success!") {
+         						document.getElementById("aa").click();
+         					};
+         			},
+         			error: function() {
+         			}
+         		})
+			});
+
+		});
+	</script>
+	<!-- /Scripts -->
+</head>
+<body>
+    <div class="container" >
+        <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 main">
+            <form id="form" method="post">
+            <h1> Login form </h1>
+            <input class="box" type="email" name="email" id="email" placeholder="E-Mail " required /><br>
+			<input class="box" type="password" name="password" id="password" placeholder="Enter your password " required /><br>
+                        <br>
+            <input type="submit" id="submitDetails" name="submitDetails" value="Login" /><br>
+			<div class="mssg bg-danger">
+				<span id="check" ></span>
+			</div>
+			<!--Login and Admin deck hyperlinks-->
+            <p class="al1">New user?</p>
+            <div class="al">
+                <p><a href="/">Sign in here</a></p>
+                <p><a href="/admin">Admin deck</a></p>
+            </div>
+		</form>
+    </div>
+        <div id="LangTable"><a href="/profile" id="aa"></a></div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- header -->
+    <header id="header">
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                    <p class="nav-brand text-dark">Waitlist application</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- /header -->
+</head>
+<body>
+    <h4>Welcome home <%= name%>!!!</h4>
+    <div class=al4>
+        <h4>Your position is: <%= position%></h4>
+        <h4>Referral link is: <%= link%></h4>
+        <h4>Referred count is: <%= referredCount%></h4>
+        <p>Share this link to invite your friends. You will get promoted one position when a user sign in using this link...!</p>
+        <p>REMEMBER: Invite more to go ahead in the position!!</p>
+    <a href="/logout">Log Out</a>
+    </div>
+</body>
+</html>
