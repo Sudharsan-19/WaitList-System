@@ -22,7 +22,7 @@
  - MongoDB
  
  ## DB connection
-  Enter the PORT number in the config.env file and replace the same wherever it is necessary. Also, replace your mongoDB link with 'Enter your db link here' line.
+  Enter the PORT number in the config.env file and replace the same wherever it is necessary. Also, replace your mongoDB link with 'Enter your db link here' line wherever it is required.
   
  ## Implementing the app
   To install use:
